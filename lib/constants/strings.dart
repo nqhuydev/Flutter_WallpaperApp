@@ -1,4 +1,5 @@
-const String API_KEY = 'your-pexels-api-key';
+const String API_KEY =
+    '563492ad6f91700001000001422590bc8a624a00b87c75cc4025e9e3';
 // 563492ad6f91700001000001422590bc8a624a00b87c75cc4025e9e3
 
 const String TRENDING = 'Trending';
