@@ -18,7 +18,6 @@ class WallpaperRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("list: $wallpaperList");
     return Container(
       height: 180,
       child: ListView.builder(

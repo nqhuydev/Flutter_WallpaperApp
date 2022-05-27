@@ -138,6 +138,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       Get.find<WallpaperController>().trendingWallpapersList,
                     ),
                     Obx(() {
+                      print(
+                          "$TRENDING: ${Get.find<WallpaperController>().trendingWallpapersList}");
                       if (Get.find<WallpaperController>()
                           .isTrendingLoading
                           .value) {
