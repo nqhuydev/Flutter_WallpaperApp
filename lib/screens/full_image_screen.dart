@@ -25,7 +25,7 @@ class FullImageScreen extends StatelessWidget {
                 imageUrl: imageUrl,
                 fit: BoxFit.cover,
                 errorWidget: (context, url, error) {
-                  WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+                  WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
                     _showFunctionalRow(false);
                   });
                   return Container(
