@@ -21,7 +21,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final _searchController = TextEditingController();
-  late StreamSubscription _subscription;
+  // late StreamSubscription _subscription;
 
   @override
   void initState() {
@@ -36,39 +36,38 @@ class _HomeScreenState extends State<HomeScreen> {
     // Get.find<WallpaperController>().getCategoryWallpapers(CARS, 30);
     // Get.find<WallpaperController>().getCategoryWallpapers(BIKES, 30);
 
-    _subscription = Connectivity()
-        .onConnectivityChanged
-        .listen((ConnectivityResult result) {
-      if (result == ConnectivityResult.mobile ||
-          result == ConnectivityResult.wifi) {
-        if (Get.find<WallpaperController>().trendingWallpapersList.length == 0)
-          Get.find<WallpaperController>().getTrendingWallpapers(30);
-        if (Get.find<WallpaperController>().natureWallpapersList.length == 0)
-          Get.find<WallpaperController>().getCategoryWallpapers(NATURE, 30);
-        if (Get.find<WallpaperController>().wildLifeWallpapersList.length == 0)
-          Get.find<WallpaperController>().getCategoryWallpapers(WILD_LIFE, 30);
-        if (Get.find<WallpaperController>().codingWallpapersList.length == 0)
-          Get.find<WallpaperController>().getCategoryWallpapers(CODING, 30);
-        if (Get.find<WallpaperController>().streetArtWallpapersList.length == 0)
-          Get.find<WallpaperController>().getCategoryWallpapers(STREET_ART, 30);
-        if (Get.find<WallpaperController>().cityWallpapersList.length == 0)
-          Get.find<WallpaperController>().getCategoryWallpapers(CITY, 30);
-        if (Get.find<WallpaperController>().motivationWallpapersList.length ==
-            0)
-          Get.find<WallpaperController>().getCategoryWallpapers(MOTIVATION, 30);
-        if (Get.find<WallpaperController>().carWallpapersList.length == 0)
-          Get.find<WallpaperController>().getCategoryWallpapers(CARS, 30);
-        if (Get.find<WallpaperController>().bikeWallpapersList.length == 0)
-          Get.find<WallpaperController>().getCategoryWallpapers(BIKES, 30);
-        if (Get.find<WallpaperController>().bmwWallpapersList.length == 0)
-          Get.find<WallpaperController>().getCategoryWallpapers(BMW, 30);
-      }
-    });
+    // _subscription = Connectivity()
+    //     .onConnectivityChanged
+    //     .listen((ConnectivityResult result) {
+    //   if (result == ConnectivityResult.mobile ||
+    //       result == ConnectivityResult.wifi) {
+    if (Get.find<WallpaperController>().trendingWallpapersList.length == 0)
+      Get.find<WallpaperController>().getTrendingWallpapers(30);
+    if (Get.find<WallpaperController>().natureWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(NATURE, 30);
+    if (Get.find<WallpaperController>().wildLifeWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(WILD_LIFE, 30);
+    if (Get.find<WallpaperController>().codingWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(CODING, 30);
+    if (Get.find<WallpaperController>().streetArtWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(STREET_ART, 30);
+    if (Get.find<WallpaperController>().cityWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(CITY, 30);
+    if (Get.find<WallpaperController>().motivationWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(MOTIVATION, 30);
+    if (Get.find<WallpaperController>().carWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(CARS, 30);
+    if (Get.find<WallpaperController>().bikeWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(BIKES, 30);
+    if (Get.find<WallpaperController>().bmwWallpapersList.length == 0)
+      Get.find<WallpaperController>().getCategoryWallpapers(BMW, 30);
+    // }
+    // });
   }
 
   @override
   void dispose() {
-    _subscription.cancel();
+    // _subscription.cancel();
     super.dispose();
   }
 
