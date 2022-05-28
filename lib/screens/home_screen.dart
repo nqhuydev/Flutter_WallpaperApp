@@ -36,6 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // Get.find<WallpaperController>().getCategoryWallpapers(CARS, 30);
     // Get.find<WallpaperController>().getCategoryWallpapers(BIKES, 30);
 
+    // Ios bi khong ket noi dc toi mang
     // _subscription = Connectivity()
     //     .onConnectivityChanged
     //     .listen((ConnectivityResult result) {
